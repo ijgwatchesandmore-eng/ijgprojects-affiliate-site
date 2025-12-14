@@ -13,29 +13,70 @@
   />
   <!-- Custom styles -->
   <style>
+    :root {
+      /* Color palette inspired by the reference site */
+      --accent: #e45756;
+      --accent-light: #ffe9e5;
+      --background: #fff6f2;
+      --text-dark: #3a3a3a;
+      --text-muted: #6c6c6c;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
+      background-color: var(--background);
+      color: var(--text-dark);
     }
     .hero {
-      background-color: #f6ede6;
-      padding: 60px 0;
+      background-color: var(--accent-light);
+      padding: 80px 0;
     }
     .hero img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+    .btn-primary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background-color: #c74342;
+      border-color: #c74342;
+    }
+    .btn-outline-secondary {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-outline-secondary:hover {
+      background-color: var(--accent);
+      color: #fff;
     }
     .store-section {
-      padding: 40px 0;
+      padding: 60px 0;
     }
     .store-section:nth-of-type(even) {
-      background-color: #fafafa;
+      background-color: #ffffff;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .alert-info {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--text-dark);
     }
     footer {
       background-color: #212529;
       color: #f8f9fa;
-      padding: 20px 0;
+      padding: 30px 0;
     }
     footer a {
       color: #f8f9fa;
@@ -73,6 +114,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#store-etsy">Etsy</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#watch-advisor">Watch Advisor</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -86,7 +130,7 @@
           <img src="hero.png" alt="Hero banner showcasing watch and design theme" />
         </div>
         <div class="col-md-6 order-md-1">
-          <h1 class="display-5 fw-bold">Discover Unique Styles &amp; Gifts</h1>
+          <h1 class="display-5 fw-bold">Discover Unique Styles & Gifts</h1>
           <p class="lead">
             Welcome to IJG Projects – your gateway to curated collections of
             watches, home décor, accessories and personalized gifts. Explore
@@ -119,6 +163,36 @@
     </div>
   </section>
 
+  <!-- Watch Advisor call‑out -->
+  <section id="watch-advisor" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="p-4 p-md-5 rounded-3" style="background-color: var(--accent-light); border-left: 5px solid var(--accent);">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+              <div class="mb-3 mb-md-0">
+                <h3 class="fw-bold mb-1">The Watch Advisor <span class="badge bg-danger ms-2">New</span></h3>
+                <p class="mb-0">
+                  Find the right watch—fast. Answer a few quick questions about your style,
+                  budget and lifestyle and our Watch Advisor will recommend a curated list
+                  of timepieces just for you.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://legendswap-af5adrus.manus.space/watch-finder"
+                  class="btn btn-primary btn-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Start The Watch Advisor →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Store sections -->
   <section id="store-ca" class="store-section">
     <div class="container">
@@ -136,8 +210,7 @@
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
-            >Visit Amazon.ca Shop</a
-          >
+            >Visit Amazon.ca Shop</a>
         </div>
         <div class="col-lg-5">
           <img
@@ -165,8 +238,7 @@
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
-            >Visit Amazon.com Shop</a
-          >
+            >Visit Amazon.com Shop</a>
         </div>
         <div class="col-lg-5">
           <img
@@ -195,8 +267,7 @@
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
-            >Visit Redbubble Shop</a
-          >
+            >Visit Redbubble Shop</a>
         </div>
         <div class="col-lg-5">
           <img
@@ -225,8 +296,7 @@
             class="btn btn-primary"
             target="_blank"
             rel="noopener noreferrer"
-            >Visit Etsy Shop</a
-          >
+            >Visit Etsy Shop</a>
         </div>
         <div class="col-lg-5">
           <img
