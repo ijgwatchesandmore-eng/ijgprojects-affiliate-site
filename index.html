@@ -13,33 +13,94 @@
   />
   <!-- Custom styles -->
   <style>
+    :root {
+      /* Color palette inspired by the reference site */
+      --accent: #e45756;
+      --accent-light: #ffe9e5;
+      --background: #fff6f2;
+      --text-dark: #3a3a3a;
+      --text-muted: #6c6c6c;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
+      background-color: var(--background);
+      color: var(--text-dark);
     }
     .hero {
-      background-color: #f6ede6;
-      padding: 60px 0;
+      background-color: var(--accent-light);
+      padding: 80px 0;
     }
     .hero img {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+    .btn-primary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background-color: #c74342;
+      border-color: #c74342;
+    }
+    .btn-outline-secondary {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .btn-outline-secondary:hover {
+      background-color: var(--accent);
+      color: #fff;
     }
     .store-section {
-      padding: 40px 0;
+      padding: 60px 0;
     }
     .store-section:nth-of-type(even) {
-      background-color: #fafafa;
+      background-color: #ffffff;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .alert-info {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--text-dark);
     }
     footer {
       background-color: #212529;
       color: #f8f9fa;
-      padding: 20px 0;
+      padding: 40px 0;
     }
     footer a {
       color: #f8f9fa;
-      text-decoration: underline;
+      text-decoration: none;
+    }
+    .footer-about p {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .social-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .social-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .social-list img {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      filter: invert(89%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(97%);
     }
   </style>
 </head>
@@ -73,6 +134,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#store-etsy">Etsy</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#watch-advisor">Watch Advisor</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -83,7 +147,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 order-md-2">
-          <img src="hero.png" alt="Hero banner showcasing watch and design theme" />
+          <!-- Updated hero image to new header showing watches and more -->
+          <img src="header.jpg" alt="Watches and More header image with watches and accessories" class="img-fluid" />
         </div>
         <div class="col-md-6 order-md-1">
           <h1 class="display-5 fw-bold">Discover Unique Styles &amp; Gifts</h1>
@@ -114,6 +179,37 @@
             watches, trendy apparel, unique home décor or one‑of‑a‑kind
             art pieces, you’ll find something you love in our stores.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Watch Advisor call‑out -->
+  <section id="watch-advisor" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="p-4 p-md-5 rounded-3" style="background-color: var(--accent-light); border-left: 5px solid var(--accent);">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+              <div class="mb-3 mb-md-0">
+                <h3 class="fw-bold mb-1">The Watch Advisor <span class="badge bg-danger ms-2">New</span></h3>
+                <p class="mb-0">
+                  Find the right watch—fast. Answer a few quick questions about your style,
+                  budget and lifestyle and our Watch Advisor will recommend a curated list
+                  of timepieces just for you.
+                </p>
+              </div>
+              <div>
+                <a
+                  href="https://legendswap-af5adrus.manus.space/watch-finder"
+                  class="btn btn-primary btn-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Start The Watch Advisor →</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -256,76 +352,47 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mb-3">
-          <h5>About IJG Projects</h5>
-          <p>
-            IJG Projects is an affiliate marketing brand focused on
-            delivering curated shopping experiences across multiple
-            platforms. We strive to provide products that enhance your
-            lifestyle while maintaining transparency and compliance with
-            affiliate guidelines.
-          </p>
+        <div class="col-md-6 mb-4 footer-about">
+          <h5 class="mb-3">About&nbsp;IJG&nbsp;Projects</h5>
+          <p>IJG&nbsp;Projects is an affiliate marketing brand focused on delivering curated shopping experiences across multiple platforms.</p>
+          <p>We strive to provide products that enhance your lifestyle while maintaining transparency and compliance with affiliate guidelines.</p>
         </div>
-        <div class="col-md-3 mb-3">
-          <h5>Stores</h5>
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#store-ca">Amazon Canada</a></li>
-            <li><a href="#store-us">Amazon US</a></li>
-            <li><a href="#store-rb">Redbubble</a></li>
-            <li><a href="#store-etsy">Etsy</a></li>
+            <li class="mb-2"><a href="#store-ca">Amazon&nbsp;Canada</a></li>
+            <li class="mb-2"><a href="#store-us">Amazon&nbsp;US</a></li>
+            <li class="mb-2"><a href="#store-rb">Redbubble</a></li>
+            <li class="mb-2"><a href="#store-etsy">Etsy</a></li>
+            <li class="mb-2"><a href="#watch-advisor">Watch&nbsp;Advisor</a></li>
           </ul>
         </div>
-        <div class="col-md-3 mb-3">
-          <h5>Follow Us</h5>
-          <p>Connect with us on social media:</p>
-          <ul class="list-unstyled d-flex gap-2">
+        <div class="col-md-3 mb-4">
+          <h5 class="mb-3">Follow Us</h5>
+          <ul class="social-list">
             <li>
-              <a
-                href="https://www.instagram.com/ijgprojects"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
-                  alt="Instagram"
-                  width="24"
-                  height="24"
-              /></a>
+              <a href="https://www.instagram.com/ijgprojects" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
+                <span>Instagram</span>
+              </a>
             </li>
             <li>
-              <a
-                href="https://www.facebook.com/ijgprojects"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
-                  alt="Facebook"
-                  width="24"
-                  height="24"
-              /></a>
+              <a href="https://www.facebook.com/ijgprojects" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" />
+                <span>Facebook</span>
+              </a>
             </li>
             <li>
-              <a
-                href="https://www.pinterest.com/ijgprojects"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg"
-                  alt="Pinterest"
-                  width="24"
-                  height="24"
-              /></a>
+              <a href="https://www.pinterest.com/ijgprojects" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg" alt="Pinterest" />
+                <span>Pinterest</span>
+              </a>
             </li>
             <li>
-              <a
-                href="https://twitter.com/ijgprojects"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
-                  alt="Twitter"
-                  width="24"
-                  height="24"
-              /></a>
+              <a href="https://twitter.com/ijgprojects" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" />
+                <span>Twitter</span>
+              </a>
             </li>
           </ul>
         </div>
