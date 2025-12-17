@@ -33,11 +33,22 @@
     rel="stylesheet"
   />
   <style>
+    :root {
+      /* Modern color palette consistent across the site */
+      --primary: #0a3d62;
+      --accent: #e74c3c;
+      --accent-light: #fdeaea;
+      --background: #f5f7fa;
+      --text-dark: #1f2d3d;
+      --text-muted: #7f8c8d;
+    }
     body {
       font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
     }
     .hero {
-      background-color: #f6ede6;
+      background-color: var(--accent-light);
       padding: 60px 0;
     }
     .hero img {
@@ -48,22 +59,23 @@
     /* Card styling for a modern, interactive look */
     .card {
       border: none;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
     }
     footer {
-      background-color: #212529;
+      background-color: var(--primary);
       color: #f8f9fa;
       padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--primary)">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">WatchesAndMore</a>
       <button
@@ -123,7 +135,7 @@
     <div class="container">
       <div
         class="p-4 p-md-5 rounded-3 border"
-        style="background-color: #ffe9e5; border-color: #e45756;"
+        style="background-color: var(--accent-light); border-color: var(--accent);"
       >
         <div class="row align-items-center">
           <div class="col-md-9">
