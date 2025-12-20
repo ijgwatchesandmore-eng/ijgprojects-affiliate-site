@@ -16,6 +16,8 @@ body{font-family:Poppins,sans-serif;background:#fdfdfd}
 .hero::before{content:'';position:absolute;inset:0;background:rgba(12,30,57,.85)}
 .hero-content{position:relative;z-index:2;text-align:center}
 .glass-card{background:#fff;border-radius:1rem;padding:2rem;box-shadow:0 10px 20px rgba(0,0,0,.12)}
+.glass-card img{transition:transform .25s ease}
+.glass-card img:hover{transform:scale(1.05)}
 .watch-advisor-sticky{position:fixed;bottom:24px;right:24px;background:#f95f62;color:#fff;padding:14px 18px;border-radius:999px;font-weight:600;text-decoration:none;z-index:999}
 .watch-advisor-sticky:hover{color:#fff}
 </style>
@@ -26,7 +28,9 @@ body{font-family:Poppins,sans-serif;background:#fdfdfd}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
 <div class="container">
 <a class="navbar-brand fw-bold" href="#">WatchesAndMore</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMain">
+<span class="navbar-toggler-icon"></span>
+</button>
 <div class="collapse navbar-collapse justify-content-end" id="navMain">
 <ul class="navbar-nav">
 <li class="nav-item"><a class="nav-link" href="#collections">Stores</a></li>
@@ -48,21 +52,63 @@ body{font-family:Poppins,sans-serif;background:#fdfdfd}
 
 <section class="py-5">
 <div class="container">
-<h2 class="fw-bold mb-3">🔥 Watch of the Week</h2>
-<p>Casio G‑Shock DW‑5600E</p>
-<a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank" class="btn btn-primary">
+<div class="row align-items-center g-5">
+<div class="col-md-6 text-center">
+<a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank">
+<img src="https://m.media-amazon.com/images/I/81pB+joKL4L._AC_UL1000_.jpg" class="img-fluid rounded shadow" style="max-width:420px;" alt="Casio G-Shock DW-5600E">
+</a>
+</div>
+<div class="col-md-6">
+<span class="badge bg-danger mb-2">Featured Pick</span>
+<h2>🔥 Watch of the Week</h2>
+<h4>Casio G-Shock DW-5600E</h4>
+<p class="text-muted">Shock-proof, 200m water resistance, iconic square design.</p>
+<a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank" class="btn btn-primary btn-lg">
 Check Price on Amazon →
 </a>
+</div>
+</div>
 </div>
 </section>
 
 <section class="py-5 bg-light">
 <div class="container">
-<h2 class="fw-bold mb-4">⭐ Top Watch Picks</h2>
+<h2 class="fw-bold text-center mb-4">⭐ Top Watch Picks Right Now</h2>
 <div class="row g-4">
-<div class="col-md-4"><div class="glass-card text-center">Casio G‑Shock 5600<br><a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank">View on Amazon →</a></div></div>
-<div class="col-md-4"><div class="glass-card text-center">Timex Weekender<br><a href="https://www.amazon.ca/dp/B004VR9GCQ?tag=ijgprojects-20" target="_blank">View on Amazon →</a></div></div>
-<div class="col-md-4"><div class="glass-card text-center">Citizen Eco‑Drive<br><a href="https://www.amazon.ca/dp/B000ZPJDX0?tag=ijgprojects-20" target="_blank">View on Amazon →</a></div></div>
+
+<div class="col-md-4">
+<div class="glass-card text-center">
+<a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank">
+<img src="https://m.media-amazon.com/images/I/81pB+joKL4L._AC_UL1000_.jpg" class="img-fluid rounded mb-3" alt="Casio G-Shock DW-5600E">
+</a>
+<h5 class="fw-bold">Casio G-Shock 5600</h5>
+<p class="text-muted">The benchmark for toughness.</p>
+<a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank" class="btn btn-sm btn-primary">Check Price →</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass-card text-center">
+<a href="https://www.amazon.ca/dp/B004VR9GCQ?tag=ijgprojects-20" target="_blank">
+<img src="https://m.media-amazon.com/images/I/71+KcGzj+zL._AC_UL1000_.jpg" class="img-fluid rounded mb-3" alt="Timex Weekender">
+</a>
+<h5 class="fw-bold">Timex Weekender</h5>
+<p class="text-muted">Clean, affordable, classic.</p>
+<a href="https://www.amazon.ca/dp/B004VR9GCQ?tag=ijgprojects-20" target="_blank" class="btn btn-sm btn-primary">Check Price →</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="glass-card text-center">
+<a href="https://www.amazon.ca/dp/B000ZPJDX0?tag=ijgprojects-20" target="_blank">
+<img src="https://m.media-amazon.com/images/I/71XnXf2sQmL._AC_UL1000_.jpg" class="img-fluid rounded mb-3" alt="Citizen Eco-Drive">
+</a>
+<h5 class="fw-bold">Citizen Eco-Drive</h5>
+<p class="text-muted">Solar-powered reliability.</p>
+<a href="https://www.amazon.ca/dp/B000ZPJDX0?tag=ijgprojects-20" target="_blank" class="btn btn-sm btn-primary">Check Price →</a>
+</div>
+</div>
+
 </div>
 </div>
 </section>
@@ -70,22 +116,10 @@ Check Price on Amazon →
 <section id="collections" class="py-5">
 <div class="container text-center">
 <h2 class="fw-bold mb-4">Shop Watches & Merch</h2>
-
-<a href="https://www.amazon.ca/shop/ijgprojects" target="_blank" class="btn btn-outline-dark m-2">
-🇨🇦 Amazon Canada Store
-</a>
-
-<a href="https://www.amazon.com/shop/ijgprojects" target="_blank" class="btn btn-outline-dark m-2">
-🇺🇸 Amazon USA Store
-</a>
-
-<a href="https://watchesandmoreshopco.etsy.com" target="_blank" class="btn btn-outline-dark m-2">
-🛍 Etsy Watch Merch
-</a>
-
-<a href="https://www.redbubble.com/people/WatchesAndMore/shop?asc=u" target="_blank" class="btn btn-outline-dark m-2">
-🎨 Redbubble Art & Apparel
-</a>
+<a href="https://www.amazon.ca/shop/ijgprojects" target="_blank" class="btn btn-outline-dark m-2">🇨🇦 Amazon Canada Store</a>
+<a href="https://www.amazon.com/shop/ijgprojects" target="_blank" class="btn btn-outline-dark m-2">🇺🇸 Amazon USA Store</a>
+<a href="https://watchesandmoreshopco.etsy.com" target="_blank" class="btn btn-outline-dark m-2">🛍 Etsy Watch Merch</a>
+<a href="https://www.redbubble.com/people/WatchesAndMore/shop?asc=u" target="_blank" class="btn btn-outline-dark m-2">🎨 Redbubble Art & Apparel</a>
 </div>
 </section>
 
