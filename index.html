@@ -3,549 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- SEO & Social Metadata -->
-  <meta name="description" content="WatchesAndMore is your curated destination for watch gift ideas, smartwatch accessories, straps, apparel, art prints and more. Explore hand‑picked collections from Amazon, Redbubble and Etsy and find your perfect timepiece with our Watch Advisor tool." />
-  <meta property="og:title" content="WatchesAndMore – Curated Marketplace for Watches & More" />
-  <meta property="og:description" content="Discover curated watches, accessories, apparel, art prints and more. Try our Watch Advisor for personalized recommendations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="header.jpg" />
-  <meta property="og:url" content="https://ijgwatchesandmore-eng.github.io/ijgprojects-affiliate-site/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="WatchesAndMore – Curated Marketplace for Watches & More" />
-  <meta name="twitter:description" content="Explore curated watches, straps, apparel and art prints across Amazon, Redbubble & Etsy. Use our Watch Advisor to find your perfect watch." />
-  <meta name="twitter:image" content="header.jpg" />
-
-  <!-- Schema.org ItemList for collections -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "WatchesAndMore Collections",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Amazon Canada Shop", "url": "amazon-ca.html"},
-      {"@type": "ListItem", "position": 2, "name": "Amazon US Shop", "url": "amazon-us.html"},
-      {"@type": "ListItem", "position": 3, "name": "Redbubble Shop", "url": "redbubble.html"},
-      {"@type": "ListItem", "position": 4, "name": "Etsy Shop", "url": "etsy.html"},
-      {"@type": "ListItem", "position": 5, "name": "Watch Advisor", "url": "https://legendswap-af5adrus.manus.space/watch-finder"}
-    ]
-  }
-  </script>
-  <title>WatchesAndMore – Curated Marketplace for Watches & More</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GTVikWW3mZpOaEBjtH2Jzs6aIVxH3U9i8p9e0tMBPJJ3DJ1DSjlLprhCA7v9cuYQ" crossorigin="anonymous" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <title>IJG Projects – Multi‑Store Landing Page</title>
+  <!-- Bootstrap CSS via CDN for quick styling -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GTVikWW3mZpOaEBjtH2Jzs6aIVxH3U9i8p9e0tMBPJJ3DJ1DSjlLprhCA7v9cuYQ"
+    crossorigin="anonymous"
+  />
   <!-- Custom styles -->
   <style>
-    :root {
-      --primary: #0c1e39;
-      --accent: #f95f62;
-      --accent-secondary: #ffa391;
-      --background: #fdfdfd;
-      --card-bg: rgba(255, 255, 255, 0.85);
-      --glass-blur: 12px;
-      --text-dark: #0a1227;
-      --text-muted: #7a8ba6;
-    }
-
     body {
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-      background-color: var(--background);
-      color: var(--text-dark);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
     }
-
-    /* Navbar */
-    .navbar-brand {
-      font-weight: 700;
-    }
-    .navbar {
-      background-color: var(--primary);
-    }
-
-    /* Hero */
     .hero {
-      position: relative;
-      min-height: 90vh;
-      /* Updated hero background to use the uploaded cover image instead of the default header */
-      background: url('cover.7231247.2400x600.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(12, 30, 57, 0.9) 0%, rgba(12, 30, 57, 0.5) 50%, rgba(12, 30, 57, 0.9) 100%);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      max-width: 800px;
-    }
-    .hero-content h1 {
-      font-size: 3.5rem;
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    .hero-content p {
-      color: #d3dae8;
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-    }
-    .hero-buttons .btn {
-      margin: 0.5rem;
-    }
-
-    /* Featured Watch hover effect */
-    .featured-watch img {
-      transition: transform 0.3s ease;
-    }
-    .featured-watch img:hover {
-      transform: scale(1.03);
-    }
-
-    /* Features */
-    .features-section {
-      padding: 80px 0;
-    }
-    .glass-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(var(--glass-blur));
-      -webkit-backdrop-filter: blur(var(--glass-blur));
-      border-radius: 1rem;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .glass-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-    }
-    .icon-circle {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 2rem;
-      margin: 0 auto 1rem;
-    }
-
-    /* Collections */
-    .collections-section {
-      padding: 80px 0;
-    }
-    .collection-card {
-      border: none;
-      overflow: hidden;
-      border-radius: 1rem;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-    .collection-card:hover {
-      transform: translateY(-6px);
-    }
-    .collection-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .collection-card .card-body {
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    /* Watch Advisor */
-    .callout-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-    }
-    .callout-image {
-      max-width: 350px;
-      width: 100%;
-    }
-    .callout-section h3 {
-      font-weight: 700;
-    }
-    .callout-section .btn {
-      background-color: #fff;
-      color: var(--primary);
-      border: none;
-    }
-    .callout-section .btn:hover {
-      background-color: #eaeff6;
-      color: var(--primary);
-    }
-
-    /* Blog highlight */
-    .blog-section {
-      padding: 80px 0;
-    }
-    .blog-card {
-      border: none;
-      overflow: hidden;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-6px);
-    }
-    .blog-card img {
-      height: 260px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .blog-card .card-body {
-      padding: 1.5rem;
-    }
-
-    /* Social share */
-    .social-share {
+      background-color: #f6ede6;
       padding: 60px 0;
-      background-color: var(--background);
-      text-align: center;
     }
-    .social-share i {
-      font-size: 2rem;
-      margin: 0 0.5rem;
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
-
-    /* Footer */
+    .store-section {
+      padding: 40px 0;
+    }
+    .store-section:nth-of-type(even) {
+      background-color: #fafafa;
+    }
     footer {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 60px 0 40px;
+      background-color: #212529;
+      color: #f8f9fa;
+      padding: 20px 0;
     }
     footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-    footer a:hover {
+      color: #f8f9fa;
       text-decoration: underline;
-    }
-    .footer-bottom {
-      margin-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.2);
-      padding-top: 1rem;
-      font-size: 0.875rem;
-    }
-
-    /* Sticky Watch Advisor Button */
-    .watch-advisor-sticky {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: var(--accent);
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      z-index: 999;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .watch-advisor-sticky:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.3);
-      color: #fff;
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark py-3">
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">WatchesAndMore</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand fw-bold" href="#">IJG Projects</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <ul class="navbar-nav align-items-lg-center me-lg-3">
-          <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
-          <li class="nav-item"><a class="nav-link" href="#advisor">Watch Advisor</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#store-ca">Amazon CA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store-us">Amazon US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store-rb">Redbubble</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store-etsy">Etsy</a>
+          </li>
         </ul>
-        <a href="#collections" class="btn btn-primary d-none d-lg-inline">See Today’s Best Watch Deals</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero section -->
   <section class="hero">
     <div class="container">
-      <div class="hero-content">
-        <h1>Discover Your Next Favorite Watch</h1>
-        <p>Curated collections from trusted platforms — find watches, gifts and accessories that match your style.</p>
-        <div class="hero-buttons">
-          <a href="#collections" class="btn btn-primary btn-lg">Shop Collections</a>
-          <a href="https://legendswap-af5adrus.manus.space/watch-finder" class="btn btn-outline-secondary btn-lg" target="_blank" rel="noopener noreferrer">Find Your Perfect Watch</a>
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2">
+          <img src="hero.png" alt="Hero banner showcasing watch and design theme" />
+        </div>
+        <div class="col-md-6 order-md-1">
+          <h1 class="display-5 fw-bold">Discover Unique Styles &amp; Gifts</h1>
+          <p class="lead">
+            Welcome to IJG Projects – your gateway to curated collections of
+            watches, home décor, accessories and personalized gifts. Explore
+            our stores on Amazon, Redbubble, and Etsy to find the perfect
+            items for yourself or loved ones.
+          </p>
+          <a href="#store-ca" class="btn btn-primary btn-lg me-2">Shop Now</a>
+          <a href="#about" class="btn btn-outline-secondary btn-lg">Learn More</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Top Picks Section -->
-  <section class="py-5 bg-light">
+  <!-- About section -->
+  <section id="about" class="py-5">
     <div class="container">
-      <h2 class="fw-bold text-center mb-4">⭐ Top Watch Picks Right Now</h2>
-      <div class="row g-4">
-        <!-- G-Shock -->
-        <div class="col-md-4">
-          <div class="glass-card text-center">
-            <a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank" rel="nofollow sponsored">
-              <img src="https://m.media-amazon.com/images/I/81pB+joKL4L._AC_UL1000_.jpg"
-                   class="img-fluid rounded mb-3"
-                   alt="Casio G-Shock DW-5600E">
-            </a>
-            <h5 class="fw-bold">Casio G-Shock 5600</h5>
-            <p class="text-muted">The benchmark for toughness.</p>
-            <a href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20" target="_blank" rel="nofollow sponsored" class="btn btn-sm btn-primary">
-              Check Price →
-            </a>
-          </div>
-        </div>
-        <!-- Timex -->
-        <div class="col-md-4">
-          <div class="glass-card text-center">
-            <a href="https://www.amazon.ca/dp/B004VR9GCQ?tag=ijgprojects-20" target="_blank" rel="nofollow sponsored">
-              <img src="https://m.media-amazon.com/images/I/71+KcGzj+zL._AC_UL1000_.jpg"
-                   class="img-fluid rounded mb-3"
-                   alt="Timex Weekender">
-            </a>
-            <h5 class="fw-bold">Timex Weekender</h5>
-            <p class="text-muted">Clean, affordable, classic.</p>
-            <a href="https://www.amazon.ca/dp/B004VR9GCQ?tag=ijgprojects-20" target="_blank" rel="nofollow sponsored" class="btn btn-sm btn-primary">
-              Check Price →
-            </a>
-          </div>
-        </div>
-        <!-- Citizen -->
-        <div class="col-md-4">
-          <div class="glass-card text-center">
-            <a href="https://www.amazon.ca/dp/B000ZPJDX0?tag=ijgprojects-20" target="_blank" rel="nofollow sponsored">
-              <img src="https://m.media-amazon.com/images/I/71XnXf2sQmL._AC_UL1000_.jpg"
-                   class="img-fluid rounded mb-3"
-                   alt="Citizen Eco-Drive">
-            </a>
-            <h5 class="fw-bold">Citizen Eco-Drive</h5>
-            <p class="text-muted">Solar-powered reliability.</p>
-            <a href="https://www.amazon.ca/dp/B000ZPJDX0?tag=ijgprojects-20" target="_blank" rel="nofollow sponsored" class="btn btn-sm btn-primary">
-              Check Price →
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Watch of the Week -->
-  <section class="featured-watch py-5">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-md-6 text-center">
-          <img
-            src="https://m.media-amazon.com/images/I/81pB+joKL4L._AC_UL1000_.jpg"
-            alt="Casio G-Shock DW-5600E"
-            class="img-fluid rounded shadow-lg"
-            style="max-width: 420px;"
-          />
-        </div>
-        <div class="col-md-6">
-          <span class="badge mb-3" style="background: var(--accent);">Featured Pick</span>
-          <h2 class="fw-bold mb-3">🔥 Watch of the Week</h2>
-          <h4 class="mb-3">Casio G‑Shock DW‑5600E</h4>
-          <p class="text-muted mb-4">
-            The modern legend. Shock‑proof, 200m water resistance, iconic square design.
-            If you’re buying one tough watch that does it all — this is it.
-          </p>
-          <a
-            href="https://www.amazon.ca/dp/B000GAYQKY?tag=ijgprojects-20"
-            target="_blank"
-            rel="nofollow sponsored"
-            class="btn btn-lg btn-primary"
-          >
-            Check Today’s Price on Amazon →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Section -->
-  <section class="trust-section py-5" style="background: var(--primary);">
-    <div class="container text-center text-white">
-      <h2 class="fw-bold mb-4">Why Watch Fans Start Here</h2>
-      <div class="row g-4 mt-4">
-        <div class="col-md-4">
-          <h5 class="fw-bold">⌚ Curated, Not Random</h5>
-          <p class="opacity-75">
-            Every watch, strap and design is hand‑picked. No clutter. No junk.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="fw-bold">🧠 Built by a Watch Enthusiast</h5>
-          <p class="opacity-75">
-            Created by a lifelong collector who actually researches and wears these watches.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="fw-bold">🎁 Perfect for Gifts & Collectors</h5>
-          <p class="opacity-75">
-            From first watches to grail‑level appreciation — there’s something for every wrist.
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold mb-3">Why Shop With IJG Projects?</h2>
+          <p class="mb-4">
+            We are passionate about discovering exceptional products that
+            combine style and quality at a great value. Each of our online
+            shops reflects our commitment to curated collections, easy
+            shopping and fast shipping. Whether you’re looking for stylish
+            watches, trendy apparel, unique home décor or one‑of‑a‑kind
+            art pieces, you’ll find something you love in our stores.
           </p>
         </div>
       </div>
-      <div class="mt-4">
-        <a href="#collections" class="btn btn-outline-light btn-lg">Explore the Collections →</a>
-      </div>
     </div>
   </section>
 
-
-  <!-- Features Section -->
-  <section class="features-section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="glass-card h-100">
-            <div class="icon-circle"><i class="bi bi-star-fill"></i></div>
-            <h4 class="fw-bold mb-2">Curated Collections</h4>
-            <p class="text-muted">Every item is hand‑picked for quality and value, so you get only the best.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="glass-card h-100">
-            <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
-            <h4 class="fw-bold mb-2">Trusted Platforms</h4>
-            <p class="text-muted">Shop confidently through Amazon, Redbubble and Etsy, with secure checkout and reliable delivery.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="glass-card h-100">
-            <div class="icon-circle"><i class="bi bi-gift"></i></div>
-            <h4 class="fw-bold mb-2">Perfect Gifts</h4>
-            <p class="text-muted">From watches to art prints and apparel, discover memorable gifts for any occasion.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Collections Section -->
-  <section id="collections" class="collections-section">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-5">Shop Our Collections</h2>
-      <div class="row g-4">
-        <div class="col-lg-3 col-md-6">
-          <div class="collection-card h-100">
-            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shop curated watches and accessories for Canadian customers" />
-            <div class="card-body">
-              <h5 class="card-title">Amazon Canada</h5>
-              <p class="card-text text-muted">Stylish watches, accessories and home goods delivered across Canada.</p>
-              <a href="amazon-ca.html" class="stretched-link">Explore the store →</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="collection-card h-100">
-            <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shop curated watches, electronics and more for U.S. customers" />
-            <div class="card-body">
-              <h5 class="card-title">Amazon US</h5>
-              <p class="card-text text-muted">A broad selection of timepieces, electronics and accessories shipped in the U.S.</p>
-              <a href="amazon-us.html" class="stretched-link">Explore the store →</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="collection-card h-100">
-            <img src="https://images.pexels.com/photos/6932677/pexels-photo-6932677.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shop unique art prints, apparel, phone cases and décor" />
-            <div class="card-body">
-              <h5 class="card-title">Redbubble</h5>
-              <p class="card-text text-muted">Original designs on T‑shirts, posters, cases and home decor.</p>
-              <a href="redbubble.html" class="stretched-link">Explore the store →</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <div class="collection-card h-100">
-            <img src="https://images.pexels.com/photos/6982412/pexels-photo-6982412.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shop handcrafted and vintage-inspired jewellery and décor" />
-            <div class="card-body">
-              <h5 class="card-title">Etsy</h5>
-              <p class="card-text text-muted">Handmade jewellery, personalized gifts and decorative pieces.</p>
-              <a href="etsy.html" class="stretched-link">Explore the store →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Watch Advisor Callout -->
-  <section id="advisor" class="callout-section">
+  <!-- Store sections -->
+  <section id="store-ca" class="store-section">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-5 text-center mb-4 mb-lg-0">
-          <img src="watch-advisor.png" alt="Watch Advisor illustration" class="callout-image rounded shadow" />
-        </div>
         <div class="col-lg-7">
-          <h3 class="mb-3">Not Sure Where to Start?</h3>
-          <p class="lead mb-4">Let our Watch Advisor guide you. Answer a few quick questions and get personalized recommendations tailored to your style and budget.</p>
-          <a href="https://legendswap-af5adrus.manus.space/watch-finder" target="_blank" rel="noopener noreferrer" class="btn btn-lg">Find Your Perfect Watch →</a>
+          <h2 class="fw-bold">Amazon Canada Store</h2>
+          <p>
+            Explore our Amazon.ca shop where we curate stylish watches,
+            accessories and home goods for Canadian customers. Enjoy fast
+            shipping within Canada and discover products that suit your
+            lifestyle.
+          </p>
+          <a
+            href="https://www.amazon.ca/shop/ijgprojects"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit Amazon.ca Shop</a
+          >
+        </div>
+        <div class="col-lg-5">
+          <img
+            src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Canadian Amazon shop preview"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Blog Highlight Section -->
-  <section class="blog-section">
+  <section id="store-us" class="store-section">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-md-6">
-          <div class="blog-card">
-            <img src="https://images.pexels.com/photos/277319/pexels-photo-277319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="A flat lay of notebooks, watch and coffee representing our blog posts" />
-          </div>
+      <div class="row align-items-center flex-lg-row-reverse">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Amazon US Store</h2>
+          <p>
+            Shop our Amazon.com store for a broad selection of watches,
+            lifestyle accessories, electronics and more. Items are hand‑picked
+            to offer quality and value for our U.S. shoppers.
+          </p>
+          <a
+            href="https://www.amazon.com/shop/ijgprojects"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit Amazon.com Shop</a
+          >
         </div>
-        <div class="col-md-6">
-          <h2 class="fw-bold mb-3">Insights & Inspiration</h2>
-          <p class="mb-4">Dive deeper into the world of watches and lifestyle. Read our blog for gift guides, product reviews and stories behind the trends.</p>
-          <a href="blog.html" class="btn btn-primary">Visit the Blog</a>
+        <div class="col-lg-5">
+          <img
+            src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="U.S. Amazon shop preview"
+            class="img-fluid rounded shadow-sm"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Social Sharing -->
-  <section class="social-share">
+  <section id="store-rb" class="store-section">
     <div class="container">
-      <h4 class="fw-bold mb-3">Love WatchesAndMore?</h4>
-      <p class="mb-4">Spread the word by sharing our site with your friends and followers.</p>
-      <div>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fijgwatchesandmore-eng.github.io%2Fijgprojects-affiliate-site%2F&text=Discover%20curated%20watches%2C%20accessories%20and%20more%20at%20WatchesAndMore!" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter" style="color:#1DA1F2;"></i></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fijgwatchesandmore-eng.github.io%2Fijgprojects-affiliate-site%2F" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook" style="color:#1877F2;"></i></a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fijgwatchesandmore-eng.github.io%2Fijgprojects-affiliate-site%2F&title=WatchesAndMore%20–%20Curated%20Marketplace%20for%20Watches%20and%20More&summary=Explore%20our%20hand‑picked%20collections%20of%20watches%2C%20apparel%20and%20art%20prints&source=" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" style="color:#0A66C2;"></i></a>
-        <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fijgwatchesandmore-eng.github.io%2Fijgprojects-affiliate-site%2F&media=https%3A%2F%2Fijgwatchesandmore-eng.github.io%2Fijgprojects-affiliate-site%2Fheader.jpg&description=Discover%20hand‑picked%20watches%2C%20art%20prints%20and%20apparel%20at%20WatchesAndMore." target="_blank" rel="noopener noreferrer"><i class="bi bi-pinterest" style="color:#E60023;"></i></a>
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Redbubble Shop</h2>
+          <p>
+            Our Redbubble store features unique art prints, apparel, phone
+            cases and home décor designed by talented artists. Discover
+            creative pieces that add personality to your wardrobe and
+            surroundings.
+          </p>
+          <a
+            href="https://www.redbubble.com/people/WatchesAndMore/shop?asc=u"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit Redbubble Shop</a
+          >
+        </div>
+        <div class="col-lg-5">
+          <img
+            src="https://images.pexels.com/photos/6932677/pexels-photo-6932677.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Redbubble shop preview"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Affiliate Disclosure -->
+  <section id="store-etsy" class="store-section">
+    <div class="container">
+      <div class="row align-items-center flex-lg-row-reverse">
+        <div class="col-lg-7">
+          <h2 class="fw-bold">Etsy Store</h2>
+          <p>
+            Visit our Etsy shop for handcrafted and vintage‑inspired items,
+            including jewelry, personalized gifts and decorative pieces. Many
+            products are made to order, giving you unique creations you won’t
+            find elsewhere.
+          </p>
+          <a
+            href="https://watchesandmoreshopco.etsy.com"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Visit Etsy Shop</a
+          >
+        </div>
+        <div class="col-lg-5">
+          <img
+            src="https://images.pexels.com/photos/6982412/pexels-photo-6982412.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Etsy shop preview"
+            class="img-fluid rounded shadow-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Affiliate disclosure -->
   <section class="py-4">
     <div class="container">
       <div class="alert alert-info" role="alert">
-        <strong>Affiliate Disclosure:</strong> This website contains affiliate links. When you click through and make a purchase, we may earn a commission at no extra cost to you. We only promote products and services we truly believe in and appreciate your support.
+        <strong>Affiliate Disclosure:</strong> This website contains affiliate
+        links. When you click through and make a purchase, we may earn a
+        commission at no extra cost to you. As required by the Amazon
+        Associates Program and FTC regulations, we only promote products and
+        services we genuinely believe in and appreciate your support.
       </div>
     </div>
   </section>
@@ -554,40 +256,91 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 mb-4">
-          <h5>About WatchesAndMore</h5>
-          <p>WatchesAndMore curates stylish watches, accessories and lifestyle pieces from trusted marketplaces. Our mission is to help you discover quality finds and perfect gifts while staying transparent about our affiliate relationships.</p>
+        <div class="col-md-6 mb-3">
+          <h5>About IJG Projects</h5>
+          <p>
+            IJG Projects is an affiliate marketing brand focused on
+            delivering curated shopping experiences across multiple
+            platforms. We strive to provide products that enhance your
+            lifestyle while maintaining transparency and compliance with
+            affiliate guidelines.
+          </p>
         </div>
-        <div class="col-md-3 mb-4">
-          <h5>Quick Links</h5>
+        <div class="col-md-3 mb-3">
+          <h5>Stores</h5>
           <ul class="list-unstyled">
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#advisor">Watch Advisor</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#store-ca">Amazon Canada</a></li>
+            <li><a href="#store-us">Amazon US</a></li>
+            <li><a href="#store-rb">Redbubble</a></li>
+            <li><a href="#store-etsy">Etsy</a></li>
           </ul>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="col-md-3 mb-3">
           <h5>Follow Us</h5>
-          <ul class="list-unstyled">
-            <li><a href="https://www.instagram.com/ijgprojects" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram me-2"></i>Instagram</a></li>
-            <li><a href="https://www.facebook.com/ijgprojects" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
-            <li><a href="https://www.pinterest.com/ijgprojects" target="_blank" rel="noopener noreferrer"><i class="bi bi-pinterest me-2"></i>Pinterest</a></li>
-            <li><a href="https://twitter.com/ijgprojects" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter me-2"></i>Twitter</a></li>
+          <p>Connect with us on social media:</p>
+          <ul class="list-unstyled d-flex gap-2">
+            <li>
+              <a
+                href="https://www.instagram.com/ijgprojects"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+                  alt="Instagram"
+                  width="24"
+                  height="24"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/ijgprojects"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+                  alt="Facebook"
+                  width="24"
+                  height="24"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.pinterest.com/ijgprojects"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg"
+                  alt="Pinterest"
+                  width="24"
+                  height="24"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/ijgprojects"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
+                  alt="Twitter"
+                  width="24"
+                  height="24"
+              /></a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="text-center footer-bottom">
-        &copy; 2025 WatchesAndMore. All rights reserved.
+      <div class="text-center mt-3">
+        &copy; 2025 IJG Projects. All rights reserved.
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-71Ko1PRWDmvyEw5uW0xT32LlcpWwzWRkQ45XSFqIrE1W+Oyi1YxcykPwCL3nRsO1" crossorigin="anonymous"></script>
-
-  <!-- Sticky Watch Advisor Button -->
-  <a href="https://legendswap-af5adrus.manus.space/watch-finder" target="_blank" rel="noopener noreferrer" class="watch-advisor-sticky">
-    🔍 Find My Watch
-  </a>
+  <!-- Bootstrap JS via CDN -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-71Ko1PRWDmvyEw5uW0xT32LlcpWwzWRkQ45XSFqIrE1W+Oyi1YxcykPwCL3nRsO1"
+    crossorigin="anonymous"
+  ></script>
 </body>
 </html>
